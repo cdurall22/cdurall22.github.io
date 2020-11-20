@@ -1,117 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       * {
         box-sizing: border-box;
       }
 
-      /* Set height of body and the document to 100% */
-      body,
-      html {
-        height: 100%;
+      body {
         margin: 0;
-        font-family: Arial;
+        background-color:lightblue;
       }
 
-      /* Style tab links */
-      .tablink {
-        background-color: #555;
-        color: white;
+      /* Style the header */
+      .header {
+      background-color:black;
+       border: 2px solid;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 25px;
+        text-align: center;
+        background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-full-aesthetic-landscape-backgroundpinktreeskyfantasyromanticbackground-image_68329.jpg")
+
+
+      }
+
+      /* Style the top navigation bar */
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      /* Style the topnav links */
+      .topnav a {
         float: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 16px;
-        font-size: 17px;
+        display: block;
+        color:lightblue;
+        text-align: center;
+        padding:14px 50px;
+        text-decoration: none;
+      }
+
+      /* Change color on hover */
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Create three unequal columns that floats next to each other */
+      .column {
+        float: left;
+        padding: 10px;
+      }
+
+      /* Left and right column */
+      .column.side {
         width: 25%;
       }
 
-      .tablink:hover {
-        background-color: gray;
+      /* Middle column */
+      .column.middle {
+        width: 50%;
       }
 
-      /* Style the tab content (and add height:100% for full page content) */
-      .tabcontent {
-        color: white;
-        display: none;
-        padding: 100px 20px;
-        height: 100%;
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
       }
 
-      #Home {
-        background-color: lightblue;
-      }
-      #Favorites {
-        background-color: #d98cbf;
-      }
-      #Simps {
-        background-color: #ff7a85;
-      }
-      #About {
-        background-color: #ff5050;
-      }
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column.side, .column.middle {
+          width: 100%;
+        }
     </style>
   </head>
   <body>
-    <button class="tablink" onclick="openPage('Home', this, 'lightblue')">
-      Home
-    </button>
-    <button
-      class="tablink"
-      onclick="openPage('Favorites', this, '#d98cbf')"
-      id="defaultOpen"
-    >
-      Favorites
-    </button>
-    <button class="tablink" onclick="openPage('Simps', this, '#ff7a85')">
-      Simps
-    </button>
-    <button class="tablink" onclick="openPage('About', this, '#ff5050')">
-      About
-    </button>
-
-    <div id="Home" class="tabcontent">
-      <h3>Home</h3>
-      <p>Home is where the heart is..</p>
-    </div>
-
-    <div id="Favorites" class="tabcontent">
-      <h3>Favorites</h3>
-      <p>Some news this fine day!</p>
-    </div>
-
-    <div id="Simps" class="tabcontent">
-      <h3>Simps</h3>
-      <p>Get in touch, or swing by for a cup of coffee.</p>
-    </div>
-
-    <div id="About" class="tabcontent">
-      <h3>About</h3>
+    <div class="header">
+      <h1>My Favorite Animes</h1>
       <p>
-        Hello my name is Chloe and <br />
-        today you will be learning a little bit about me
+        In this website you will find out what are my top five favorite
+        <br />animes along with the people that I simp for. Also more
+        information <br />
+        about me!
       </p>
     </div>
 
-    <script>
-      function openPage(pageName, elmnt, color) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].style.backgroundColor = "";
-        }
-        document.getElementById(pageName).style.display = "block";
-        elmnt.style.backgroundColor = color;
-      }
+    <div class="topnav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#favorites">Favorites</a>
+      <a href="#simps">Simps</a>
+    </div>
 
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
-    </script>
+    <div class="row">
+      <div class="column side">
+        <h2>Side</h2>
+        <p>
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BZjNmZDhkN2QtNDYyZC00YzJmLTg0ODUtN2FjNjhhMzE3ZmUxXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_UY1200_CR85,0,630,1200_AL_.jpg"
+            alt="hunterxhunter"
+            width="50%"
+            height="110px"
+            style="vertical-align:middle"
+          />
+        </p>
+      </div>
+
+      <div class="column middle">
+        <h2>What is Anime? What makes Anime, Anime.</h2>
+        <p>
+          Anime is hand-drawn and computer animation originating from Japan.
+          Anime, a term derived from the English word animation, is used in
+          Japanese to describe all animation, regardless of style or origin.
+        </p>
+        <p>
+          In Japan all animation, regardless of kind, style, or where it was
+          made, is anime. Anime is simply the word Japan has adapted to use to
+          refer to animated cartoons. ... Outside Japan anime typically only
+          refers to animation from Japan. Some argue style is involved as well,
+          but there is no one single “anime style” out there.
+        </p>
+      </div>
+
+      <div class="column side">
+        <h2>side</h2>
+      </div>
+    </div>
   </body>
 </html>
