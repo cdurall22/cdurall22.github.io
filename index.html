@@ -4,132 +4,198 @@
     <title>CSS Website Layout</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="script.js" defer></script>
+    <link herf="style.css" rel="stylesheet" />
     <style>
-      * {
-        box-sizing: border-box;
+      body{
+         background-color:lightblue;
       }
-
-      body {
-        margin: 0;
-        background-color:lightblue;
-      }
-
+      
       /* Style the header */
       .header {
       background-color:black;
        border: 2px solid;
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size:100% 100%;
         padding: 25px;
         text-align: center;
-        background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-full-aesthetic-landscape-backgroundpinktreeskyfantasyromanticbackground-image_68329.jpg")
-
+        background-image: url("https://cdn.pixabay.com/photo/2018/01/24/18/05/background-3104413_960_720.jpg");
 
       }
+      
+      
+      
+      /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
 
-      /* Style the top navigation bar */
-      .topnav {
-        overflow: hidden;
-        background-color: #333;
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color:pink;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding:6px 12px;
+  border: ;
+  border-top: none;
+}
+       
+      
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+/* Style the footer */
+.footer {
+background-image: url("https://www.publicdomainpictures.net/pictures/370000/velka/anime-slayer-of-demons.png");
+  padding: 10px;
+  text-align: center;
+}
+      #page{
+        margin-left:auto;
+        margin-right:auto;
+        max-width:auto;
+        background-color:lightblue;
       }
 
-      /* Style the topnav links */
-      .topnav a {
-        float: left;
-        display: block;
-        color:lightblue;
-        text-align: center;
-        padding:14px 50px;
-        text-decoration: none;
-      }
-
-      /* Change color on hover */
-      .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-
-      /* Create three unequal columns that floats next to each other */
-      .column {
-        float: left;
-        padding: 10px;
-      }
-
-      /* Left and right column */
-      .column.side {
-        width: 25%;
-      }
-
-      /* Middle column */
-      .column.middle {
-        width: 50%;
-      }
-
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 600px) {
-        .column.side, .column.middle {
-          width: 100%;
-        }
+     
     </style>
   </head>
   <body>
-    <div class="header">
-      <h1>My Favorite Animes</h1>
-      <p>
-        In this website you will find out what are my top five favorite
-        <br />animes along with the people that I simp for. Also more
-        information <br />
-        about me!
-      </p>
-    </div>
-
-    <div class="topnav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#favorites">Favorites</a>
-      <a href="#simps">Simps</a>
-    </div>
-
-    <div class="row">
-      <div class="column side">
-        <h2>Side</h2>
+     <div id="">
+      <div class="header">
+        <h1>My Favorite Animes</h1>
         <p>
-          <img
-            src="https://m.media-amazon.com/images/M/MV5BZjNmZDhkN2QtNDYyZC00YzJmLTg0ODUtN2FjNjhhMzE3ZmUxXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_UY1200_CR85,0,630,1200_AL_.jpg"
-            alt="hunterxhunter"
-            width="50%"
-            height="110px"
-            style="vertical-align:middle"
-          />
+          In this website you will find out what are my top five favorite
+          <br />animes along with the people that I simp for. Also more
+          information <br />
+          about me!
         </p>
       </div>
-
-      <div class="column middle">
-        <h2>What is Anime? What makes Anime, Anime.</h2>
-        <p>
-          Anime is hand-drawn and computer animation originating from Japan.
-          Anime, a term derived from the English word animation, is used in
-          Japanese to describe all animation, regardless of style or origin.
-        </p>
-        <p>
-          In Japan all animation, regardless of kind, style, or where it was
-          made, is anime. Anime is simply the word Japan has adapted to use to
-          refer to animated cartoons. ... Outside Japan anime typically only
-          refers to animation from Japan. Some argue style is involved as well,
-          but there is no one single “anime style” out there.
-        </p>
-      </div>
-
-      <div class="column side">
-        <h2>side</h2>
-      </div>
     </div>
+  <!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'home')">Home</button>
+  <button class="tablinks" onclick="openCity(event, 'about')">About</button>
+  <button class="tablinks" onclick="openCity(event, 'favorites')">Favorites</button>
+  <button class="tablinks" onclick="openCity(event, 'simps')">Simps</button>
+</div>
+
+<!-- Tab content -->
+<div id="home" class="tabcontent">
+  <h3></h3>
+  
+      <div class="row">
+        <div class="column side">
+          <h2></h2>
+          <p>
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BZjNmZDhkN2QtNDYyZC00YzJmLTg0ODUtN2FjNjhhMzE3ZmUxXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_UY1200_CR85,0,630,1200_AL_.jpg"
+              alt="hunterxhunter"
+              width="80%"
+              height="500px"
+              style="vertical-align:middle"
+            
+            />
+          </p>
+        </div>
+
+        <div class="column middle">
+          <h2>What is Anime? What makes Anime, Anime.</h2>
+          <p>
+            Anime is hand-drawn and computer animation originating from Japan.
+            Anime, a term derived from the English word animation, is used in
+            Japanese to describe all animation, regardless of style or origin.
+          </p>
+          <p>
+            In Japan all animation, regardless of kind, style, or where it was
+            made, is anime. Anime is simply the word Japan has adapted to use to
+            refer to animated cartoons. ... Outside Japan anime typically only
+            refers to animation from Japan. Some argue style is involved as
+            well, but there is no one single “anime style” out there.
+          </p>
+        </div>
+
+        <div class="column side">
+          <h2>side</h2>
+          <p>
+            hey this is the end
+          </p>
+        </div>
+      </div>
+</div>
+
+<div id="about" class="tabcontent">
+  <h3>In this page your going to learn more about me!</h3>
+  
+  
+  <p>Hello my name is Chloe Durall I'm 15 years old and in the the 10th grade.<br>
+    Somethings that I'm interestad in is digatal art. I recently go into it <br>
+    because it's something that I've been  wanting to do.
+  
+  
+  </p>
+</div>
+
+<div id="favorites" class="tabcontent">
+  <h3></h3>
+  <p></p>
+</div>
+    <div id="simps" class="tabcontent">
+  <h3></h3>
+  <p></p>
+      
+</div>
+    <div class="footer">
+  <p>Footer</p>
+</div>
+   
   </body>
 </html>
