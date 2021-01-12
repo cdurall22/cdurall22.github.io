@@ -7,6 +7,9 @@
     <script src="script.js" defer></script>
     <link herf="style.css" rel="stylesheet" />
     <style>
+      *{
+  box-sizing: border-box;
+}
       body{
          background-color:lightblue;
       }
@@ -64,18 +67,24 @@
       
 /* Create three unequal columns that floats next to each other */
 .column {
-  float: left;
+  float:left;
   padding: 10px;
 }
 
 /* Left and right column */
 .column.side {
   width: 25%;
+  
 }
 
 /* Middle column */
 .column.middle {
   width: 50%;
+   width: 500px;
+  padding: 10px;
+  border: 5px solid gray
+  ;margin: 0;
+  color: green;
 }
 
 /* Clear floats after the columns */
@@ -104,7 +113,14 @@ background-image: url("https://www.publicdomainpictures.net/pictures/370000/velk
         max-width:auto;
         background-color:lightblue;
       }
-
+      h2{
+        text-align:center,right;
+      }
+      .list{
+        text-align:;
+          
+}
+      
      
     </style>
   </head>
@@ -139,7 +155,7 @@ background-image: url("https://www.publicdomainpictures.net/pictures/370000/velk
             <img
               src="https://m.media-amazon.com/images/M/MV5BZjNmZDhkN2QtNDYyZC00YzJmLTg0ODUtN2FjNjhhMzE3ZmUxXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_UY1200_CR85,0,630,1200_AL_.jpg"
               alt="hunterxhunter"
-              width="80%"
+              width="90%"
               height="500px"
               style="vertical-align:middle"
             
@@ -164,9 +180,13 @@ background-image: url("https://www.publicdomainpictures.net/pictures/370000/velk
         </div>
 
         <div class="column side">
-          <h2>side</h2>
+          <h2></h2>
           <p>
-            hey this is the end
+            <img src="https://m.media-amazon.com/images/M/MV5BN2E2OTgzODktMjBhYy00MjJjLWI0OTgtNGYxOGNhMWMxOWE4XkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg"
+              alt="tokoy ghoul"  
+              width="90%"
+              height="500px"
+               style="vertical-align:middle"/>
           </p>
         </div>
       </div>
@@ -185,8 +205,19 @@ background-image: url("https://www.publicdomainpictures.net/pictures/370000/velk
 </div>
 
 <div id="favorites" class="tabcontent">
-  <h3></h3>
-  <p></p>
+  <h3>Top Ten Favorite Animes </h3>
+  <p> <ol>
+            <li class="list"> Attack on Titan</li>
+            <li class="list"> Demon Slayer</li>
+            <li class="list"> Death Note</li>
+            <li class="list"> The Promised Neverland</li>
+            <li class="list">Bleach</li>
+            <li class="list">Fairy Tail</li>
+            <li class="list">One Punch Man</li>
+            <li class="list">Dr. Stone</li>
+            <li class="list"> That Time I Got Reincarnated As A Slime</li>  
+            <li class="list"> That Time I Got Reincarnated As A Slime</li> </ol>  
+</p>
 </div>
     <div id="simps" class="tabcontent">
   <h3></h3>
