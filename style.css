@@ -137,3 +137,6 @@ figcaption {
   padding: 2px;
   text-align: center;
 }
+p.normal {
+  font-weight: bold;
+}
