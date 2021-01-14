@@ -140,3 +140,6 @@ figcaption {
 p.normal {
   font-weight: bold;
 }
+p.help{
+  color: rgb(255, 255, 255);
+}
